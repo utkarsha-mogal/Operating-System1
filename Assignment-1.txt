@@ -1,0 +1,133 @@
+ Q1. Explore the following commands with various options, refer man pages for  further help 
+   a) date ->date
+   b) cal->cal
+  c) bc 
+ ->bc command is used for command line calculator. It is similar to basic calculator by using which we can do basic mathematical calculations.
+ d) echo-
+  echo "Utkarsha"
+ e) who 
+ f) whoami->whoami
+ g) logname 
+->logname command prints the login name of the current user.
+ g) uname
+->uname -v
+
+Q2.A) Create three directory a b and c and create a.txt,b.txt and c.txt in each directory respectively and then copy c directory into the a.
+	->mkdir {a ,b ,c }
+                ->cd a - touch a.txt 
+                ->cd b - touch b.txt 
+	->cd c- touch c.txt 
+                ->copy c directory into the a== ( cp -r c.txt a.txt)
+
+      B)Move Directory b to c.
+       -> mv b.txt c.txt
+      C)Create alias of ls -lh command to your name.
+       ->ls -lh
+       ->alias utkarsha="this is shell scripting"
+        ->alias
+      D)Change Directory name a to cdac.
+     -> mv a cdac
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and  file5.txt with some text inside it. Search for 's' character inside all the files
+ using grep command. Also Use cat to view all file content together.
+  ->touch file1.txt  file2.txt  file3.txt file4.txt file5.txt 
+  -> grep -o "s" file1.txt ->grep -o "s" file2.txt->grep -o "s" file3.txt->grep -o "s" file4.txt->grep -o "s" file5.txt
+  ->cat >file1.txt file2.txt
+
+   B)Create file.txt using cat and edit that using nano editor.
+   -> cat file.txt
+   ->nano file.txt
+
+ C)Create 5 empty files using touch command
+ ->touch File1.txt  File2.txt  File3.txt  File4.txt  File5.txt
+
+ D)Remove previously created directory a , b and c.
+ -> rm a b c
+
+Q4. Create a file with some content using vi editor
+  a) Display the file using cat command -> vi sample.txt
+			           -> cat sample.txt
+
+ b) Display line numbers along with content 
+   -> set number
+
+ c) Display the file in reverse order using tac ->
+ ->tac file1 file2 file3
+
+ d) Combine multiple files using cat command->
+ -> cat file1.txt file2.txt file3.txt
+
+Q5. Create Random some files and sub directories.
+         a) display files row wise, column wise, 1 per row
+             >ls-l
+             >ls
+         b) sort the files in ascending, descending order
+           ->ls -l  (asending order)
+           ->ls -l  -r (desending order)
+        c) Create some hidden files and sub directories and display them using “ls -a”
+            ->touch sample.txt
+           -> ls -a
+        d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+             ->touch  -t file1.txt
+        e) Recursive display contents of your home directory.
+             ->ls -R
+        f ) display all attributes of files and directories using ls -l
+             ->ls -l
+        g) display attributes of a directory using ls -ld
+             ->ls -ld
+
+Q1. Create directory of your name and then create 4 files inside it named a.txt, b.txt, c.txt and d.sh. And change the directory permission to only user and also files permission to 
+only user such that
+   ->mkdir utkarsha
+   -> chmod o=rwx utkarsha
+         a)user can read and write the file a.txt and b.txt
+         b)user can write the file c.txt
+         c)user can exectuable the file d.sh. Make
+	Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+Q2. Change the permission of the previous directory to executable only.Analyze the output.
+   ->chmod +x filename	Analyze the output.
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+Q4. Use echo to list the all files of your home directory.
+Q5. Use echo to list the all files of /etc/ directory
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+Q7. Use echo to append your name to a.txt
+
+==================================================================================
+
+Note:Many operation might not work.Analyze them
+1.Create Three level nested directory a,b and c
+a)Create at least one hidden file in each directory
+b)Create at least one normal text file in each directory
+c)Copy c into a
+d)Copy file inside a into b
+
+2.	Change the third level directory c permission to read only
+3.	Try copying third level c directory to outside of a
+4.	Create the directory  “data“ inside b
+5.	Change the permission of b to read and write only
+6.	Create directory “data2”  inside b
+7.	Create data.txt file inside b
+8.	Rename the second level directory c to copied_dir
+9.	Change permission of copied_dir to only executable
+10.	Try ls on copied_dir
+11.	Try moving copied_dir to outside of a
+12.	Try moving data directory outside of a
+13.	Now change the owner of the directory a to root
+14.	Change permission of a to read write and executable to only user
+15.	Try creating directory sample inside a
+16.	Create directory x outside a
+17.	Try moving x inside a
+18.	Create directory movies
+19.	Change group of movies to sudo
+20.	Change group of movies to avahi
+21.	Try changing permission after changing ownership to root
+22.	Try Changing permission after changing group to sudo without sudo
+23.	Try Changing owner and group both to root
+24.	Try changinging permission
+25.	Try deleting the file
+
+	
+	
