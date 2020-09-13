@@ -1,0 +1,58 @@
+4)Write a script To check given year is leap or not
+->echo "enter year"
+     read y
+   k='expr $y % 4'
+     if test $k -eq 0
+then
+    echo "leap year"
+else
+  echo "not a leap year"
+   fi
+
+5)Write a program to check whether given no.is even or odd
+-> read number
+   y='expr $number % 2'
+     if test $y -eq 0
+         then
+    echo number is even
+     else
+    echo number is odd
+ fi 
+
+6. a) Write a script to find biggest of three no.s
+-> echo "enter the value of a b c"
+read a
+read b
+read c
+if test $a -gt $b -a $a -gt $c
+then
+ echo "a is greatest"
+else
+ if test $b -gt $c
+ then
+ echo "b is greatest"
+ else
+ echo "c is greatest"
+ fi
+
+7
+)Write a script to generate Fibonacci series
+-> echo enter the last element of series
+ read n
+ echo
+  a=0
+  b=1
+echo $a
+echo $b
+   i=1
+while test $i -lt $n
+do
+ c='expr $a + $b'
+ if test $c -gt $n
+ then
+ exit
+ fi
+ echo $c
+ a=$b
+ b=$c
+done
