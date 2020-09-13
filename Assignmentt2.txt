@@ -20,23 +20,21 @@ else
  fi 
 
 6. a) Write a script to find biggest of three no.s
--> echo "enter the value of a b c"
-read a
-read b
-read c
-if test $a -gt $b -a $a -gt $c
-then
- echo "a is greatest"
-else
- if test $b -gt $c
- then
- echo "b is greatest"
- else
- echo "c is greatest"
- fi
+->  #!bin/bash  
+  for i in *
+  do
+	if [ -e $i ]
+	then
+		file=`ls -l $i | awk '{print $5}'`
+		if (( $file > 5000 ))
+		then
+			ls -l $i
+		fi 
+	fi
+done
 
-7
-)Write a script to generate Fibonacci series
+
+7)Write a script to generate Fibonacci series
 -> echo enter the last element of series
  read n
  echo
