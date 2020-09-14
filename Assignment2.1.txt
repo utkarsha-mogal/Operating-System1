@@ -1,0 +1,52 @@
+7)greatest number
+echo 'Enter num1 : '
+read num1
+echo 'Enter num2 : '
+read num2
+echo 'Enter num3 : '
+read num3
+
+(( avg = (( $num1+$num2+$num3 ))/3 ))
+echo 'Average : '$avg
+
+8)odd even number
+echo 'Enter a number : '
+read num
+
+if (( num%2 == 0 ))
+then 
+	echo $num 'is Even.'
+else
+	echo $num 'is Odd.'
+fi
+
+9)Daya of book
+#!/bin/bash
+
+echo 'Enter the no of Day : '
+read day
+
+if [ $day == 1 ]
+then
+	echo 'Sunday'
+elif [ $day == 2 ]
+then
+	echo 'Monday'
+elif [ $day == 3 ]
+then
+	echo 'Tuesday'
+elif [ $day == 4 ]
+then
+	echo 'Wednesday'
+elif [ $day == 5 ]
+then
+	echo 'Thrusday'
+elif [ $day == 6 ]
+then
+	echo 'Friday'
+elif [ $day == 7 ]
+then
+	echo 'Saturday'
+else
+	echo 'Invalid Entry'
+fi
